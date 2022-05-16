@@ -1,6 +1,10 @@
 # Software Development Practice
 In this repository we will add on a weekly basis the examples shown during the lectures.
 
+# Projects
+Hello World: A basic example to start a java program
+Examples: Contains some basic examples shown during the course
+
 # Installation
 Java Runtime: 
 https://java.com/en/download/help/windows_manual_download.html
