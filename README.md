@@ -4,6 +4,7 @@ In this repository we will add on a weekly basis the examples shown during the l
 # Projects
 Hello World: A basic example to start a java program
 Examples: Contains some basic examples shown during the course
+ProjectWorkSample: a basic web application that connects to a postgres database
 
 # Installation
 Java Runtime: 
@@ -27,4 +28,5 @@ https://www.w3schools.com/java/
 
 Stackoverflow (Community): 
 https://stackoverflow.com/
+
 
