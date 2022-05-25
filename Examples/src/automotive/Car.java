@@ -1,6 +1,7 @@
 package automotive;
 
-public class Car {
+public class Car extends Vehicle {
+	public static int amountofCreatedCars = 0;
 	private String color;
 	private int weight;
 	private String brand;
@@ -12,6 +13,7 @@ public class Car {
 	
 	public Car() {
 		super();
+		amountofCreatedCars++;
 		this.color = "";
 		this.weight = 0;
 		this.brand = "?";
@@ -20,11 +22,13 @@ public class Car {
 		this.seats = 0;
 		this.motor = new Motor();
 		this.speed = 0;
+		this.setProductionYear(2022);
 	}
 	
 	
 	public Car(String brand, String model, int doors, int seats, String color, int weight, Motor motor) {
 		super();
+		amountofCreatedCars++;
 		this.brand = brand;
 		this.model = model;
 		this.color = color;
@@ -33,6 +37,7 @@ public class Car {
 		this.seats = seats;
 		this.motor = motor;
 		this.speed = 0;
+		this.setProductionYear(2022);
 	}
 	
 	public void accelerate(int difference) {
@@ -40,11 +45,14 @@ public class Car {
 	}
 	
 	public void brake(int difference) {
-		this.speed -= difference;
+		this.speed = this.speed - difference;
+		if ( this.speed < 0 ) {
+			this.speed = 0;
+		}
 	}
 	
     public void printBrand() {
-    	System.out.println("This car is a "+brand);
+    	System.out.println("This car is a "+this.brand);
     }
 	
 	public String getBrand() {
@@ -103,4 +111,20 @@ public class Car {
 	public void setSpeed(int speed) {
 		this.speed = speed;
 	}
+
+
+	@Override
+	public int getFuelPricePer100KiloMeters() {
+		if (this.getMotor().getType().equals(Motor.ELECTRIC)) {
+			// todo calculate the price by electricity price and the consumption of the motor
+			return 10;
+		}
+		if (this.getMotor().getType().equals(Motor.BENZIN)){
+			// todo calculate the price by benzin price and the consumption of the motor
+			return 20;
+		}
+		// return 0 (e.g. non-motor bike)
+		return 0;
+	}
+	
 }

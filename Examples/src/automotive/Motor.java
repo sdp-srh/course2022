@@ -1,6 +1,8 @@
 package automotive;
 
 public class Motor {
+	public static final String ELECTRIC = "ELECTRIC_MOTOR";
+	public static final String BENZIN = "BENZIN_MOTOR";
 	String type;
 	String fuel;
 	int power;
