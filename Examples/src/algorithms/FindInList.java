@@ -23,6 +23,11 @@ public class FindInList {
 		if (isValueInList(list, "Daisy")) {
 			System.out.println("Daisy is in List");
 		}
+		
+		String foundString = findValueInList(list, "Minni");
+		if (foundString != null) {
+			System.out.println("Found the value "+foundString);
+		}
 	}
 	
 	public static boolean isValueInList(ArrayList<String> list, String value) {
@@ -32,6 +37,15 @@ public class FindInList {
 			}
 		}
 		return false;
+	}
+	
+	public static String findValueInList(ArrayList<String> list, String value) {
+		for (String s : list) {
+			if (s.equals(value)) {
+				return s;
+			}
+		}
+		return null;
 	}
 	
 	public static ArrayList<String> getPersonList() {

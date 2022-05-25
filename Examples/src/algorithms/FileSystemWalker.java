@@ -6,9 +6,10 @@ import java.util.ArrayList;
 public class FileSystemWalker {
 
 	ArrayList<String> entries = new ArrayList<String>();
-	
+	int foldersCount;
 	public FileSystemWalker() {
 		entries = new ArrayList<String>();
+		foldersCount = 0;
 	}
 	
 	public static void main(String args[]) {
@@ -18,8 +19,9 @@ public class FileSystemWalker {
 	}
 	
 	public void readFolder(File folder) {
+		foldersCount++;
 		File[] files = folder.listFiles();
-		for (File f:files) {
+		for (File f : files) {
 			// we add each entry
 			this.entries.add(f.getAbsolutePath());
 			if (f.isDirectory()) {
@@ -33,6 +35,7 @@ public class FileSystemWalker {
 		for (int i=0;i<this.entries.size();i++) {
 			System.out.println(this.entries.get(i));
 		}
+		System.out.println("Files: "+(this.entries.size()-this.foldersCount));
+		System.out.println("Folders: "+this.foldersCount);
 	}
-	
 }

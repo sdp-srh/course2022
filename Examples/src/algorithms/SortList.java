@@ -29,6 +29,7 @@ public class SortList {
 					String tmp = list.get(j - 1);
 					list.set(j - 1, list.get(j));
 					list.set(j, tmp);
+					// System.out.println(list);
 				}
 			}
 		}
