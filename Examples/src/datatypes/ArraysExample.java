@@ -11,7 +11,7 @@ public class ArraysExample {
 	        String[] strArr = {"One","Two","Three"};
 	        String[] strArr1 = new String[3];
 	        strArr1[0] = "1";
-	        strArr1[1] = "2";
+	        strArr1[1] = "two";
 	        strArr1[2] = "3";
 	        String[] strArr2 = null;
 	        System.out.println("Array elements are:");
@@ -38,13 +38,12 @@ public class ArraysExample {
 	        {
 	            System.out.println(strArr2[i]);
 	        }
-	        
-	        
-	        System.out.println("====================");
-	        System.out.println("Printing array elements using Arrays.toString():");
-	        System.out.println("====================");
+	       
+	        //System.out.println("====================");
+	        //System.out.println("Printing array elements using Arrays.toString():");
+	        //System.out.println("====================");
 	        // You can also use Arrays.toString() to print an array
-	        System.out.println(Arrays.toString(strArr));
+	        //System.out.println(Arrays.toString(strArr));
 	    }
 
 }

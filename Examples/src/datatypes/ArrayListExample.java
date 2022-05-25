@@ -18,6 +18,14 @@ public class ArrayListExample {
 		while (itr.hasNext()) {// check if iterator has the elements
 			System.out.println(itr.next());// printing the element and move to next
 		}
+		System.out.println("");
+		for (String element : list) {
+			System.out.println(element);
+		}
+		System.out.println("");
+		for (int i= list.size()-1;i>=0;i--) {
+			System.out.println(list.get(i));
+		}
 	}
 
 }

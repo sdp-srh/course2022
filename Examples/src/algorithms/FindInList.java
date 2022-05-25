@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 public class FindInList {
 	
-	
-	
 	public static void main(String args[]) {
 		ArrayList<String> list = getPersonList();
 		// check if the list contains a value
@@ -54,7 +52,6 @@ public class FindInList {
 		persons.add("Micky");
 		persons.add("Minni");
 		persons.add("Daisy");
-
 		return persons;
 	}
 	

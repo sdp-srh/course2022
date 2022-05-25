@@ -16,5 +16,12 @@ public class Factorial {
 			return n * factorial(n-1);
 		}
 	}
-
+	
+	public static int iterativeFactorial(int n) {
+		int result = 1;
+		for (int i=1;i<n+1;i++) {
+			result = result * i;
+		}
+		return result;
+	}
 }

@@ -6,7 +6,6 @@ public class HashSetDemo{
 	static boolean isUnique(String s)
 	{
 		HashSet<Character> set =new HashSet<Character>();
-		
 		for(int i=0;i<s.length();i++)
 		    {
 				char c=s.charAt(i);
@@ -23,12 +22,12 @@ public class HashSetDemo{
 	
 	public static void main(String[] args)
 	{
-		String s="helo wqty ";
+		String s="helo xqty ";
 		boolean ans=isUnique(s);
 		if(ans)
 			System.out.println("string has unique characters");
 		else
-			System.out.println("string does not have unique characters");		
+			System.out.println("there are repeated characters");		
 		
 	}
 }
