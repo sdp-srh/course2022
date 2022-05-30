@@ -18,6 +18,12 @@ public class FileSystemWalker {
 	}
 	
 	public void readFolder(File folder) {
+		// check if it is really a folder
+		if (!folder.isDirectory()) {
+			System.out.println("Only folders can be parsed");
+			// throwing an exception would be a better solution
+			return;
+		}
 		File[] files = folder.listFiles();
 		for (File f : files) {
 			// we add each entry
